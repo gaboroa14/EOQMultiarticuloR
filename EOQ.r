@@ -13,10 +13,11 @@ limiteTiempo <- function(k,d,h,T,lambda){
         print("ti: ")
         print(t[i])
     }
+    suma = sum(t)
     print("Suma de los ti: ")
-    print(sum(t))
+    print(suma)
     print("suma(ti)-T: ")
-    print(sum(t)-T)
+    print(suma-T)
 }
 
 limiteArea <- function(k,d,h,a,A,lambda){
@@ -35,10 +36,11 @@ limiteArea <- function(k,d,h,a,A,lambda){
         print("ti: ")
         print(t[i])
     }
+    suma = sum(a)
     print("Suma de los ai: ")
-    print(sum(a))
+    print(suma)
     print("ai-A: ")
-    print(sum(a)-A)
+    print(suma-A)
 }
 
 limiteCosto <- function(k,d,h,c,C,lambda){
@@ -48,19 +50,20 @@ limiteCosto <- function(k,d,h,c,C,lambda){
         print("Elemento ")
         print(i)
         q[i] = sqrt((2*k[i]*d[i])/(h[i]-2*lambda*c[i]))
-        c[i] = q[i]*c[i]
+        cs[i] = q[i]*c[i]
         t[i] = q[i]/d[i]
         print("Qi: ")
         print(q[i])
-        print("ai: ")
-        print(a[i])
+        print("ci: ")
+        print(cs[i])
         print("ti: ")
         print(t[i])
     }
+    suma = sum(cs)
     print("Suma de los ci: ")
-    print(sum(c))
+    print(suma)
     print("ci-C: ")
-    print(sum(c)-C)
+    print(suma-C)
 }
 
 Qi <- function(k,d,h){
